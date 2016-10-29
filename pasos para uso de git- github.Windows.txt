@@ -1,0 +1,52 @@
+trabajar con github - git
+
+git config --global user.name ""
+git config --global user.email ""
+
+1.- empiezo a trabajar en local (en mi maquina)
+
+Quiero subir los cambios a un repositorio remoto (github)
+
+
+mkdir nombreproyecto
+cd nombre del proyecto
+echo "string "  > saludo.txt
+git init
+git status 
+git add saludo.txt
+git commit -m " Creada la pagina de inicio"
+git log-- oneline
+
+:wq enter
+
+ivandeleon.umg@gmail.com
+
+
+a. crear un usuario en github.com
+b. creado el proyecto en github.
+c. vincular e repositorio remoto en github  en el repositorio local 
+
+git remote add remoto https://github.com/julioSleon/prueba3.git
+git remote -v
+
+d. empujar mis cambios locales al ermoto dado del alta en el paso c.
+git push remoto master
+git pull remotoo master
+
+
+2. Primero creo el repositorio en git hub  y luego quiero trabajar en local.
+
+a. creado el proyecto en github
+b. ir al local: git clone<direccion url github
+c. git add <nombre>
+d. git commit -m "mensaje"
+e. git push origin master
+
+
+3. crear ramas 
+
+
+git branch nombre de la rama
+
+git checkout  nombre de la rama
+git checkout -b ramaprueba1
