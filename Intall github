@@ -1,0 +1,35 @@
+crear una nueva cuenta en git hub
+cuenta:  jd3972288@gmail.com
+pass:    Deleonsocgio10
+
+intalar git hub:
+	sudo apt-get install git
+	sudo apt-get install xclip
+	get --version
+
+crear un nuevo repositorio en git hub.
+		nombre de repositorio
+		descripcion
+		marcmos que sea 
+				public
+				Initialize this repositori with a readm
+
+luego vamos  a configurar git en nuestra maquina:
+
+	Creamos una carpeta donde se mas comoda para clonar el repositorio de github.
+        gitproyects$ git clone https://github.com/Jdeleons/ProyectoAnalisis.git 
+
+INSTALAMOS GIT GUI
+	sudo atp-get install gitk giggle git-cola git-gui gitg
+        git gui
+
+	git config --global user.name "carlos"
+        git config --global user.email "me@carlosandresviteri.com"
+
+CONFIRMAR LOS CAMBIOS CON:
+        esto siempre dentro de la carpeta donde se va a clonar el archivo o proyecto quese esta trabajando.
+	git pull origin master
+        git push origin master
+
+
+ 
