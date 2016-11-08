@@ -1,0 +1,16 @@
+<Schema name="cubo2proyecto">
+  <Cube name="cubo2becados" visible="true" cache="true" enabled="true">
+    <Table name="tablahechos" alias="">
+    </Table>
+    <Dimension type="StandardDimension" visible="true" foreignKey="bacado_id" name="DimBecados">
+      <Hierarchy name="New Hierarchy 0" visible="true" hasAll="true" allMemberName="Estudiantes Becados" primaryKey="bacado_id">
+        <Table name="dimbecados" alias="">
+        </Table>
+        <Level name="NivelBecados" visible="true" column="becado" uniqueMembers="false">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Measure name="TotalEstudiantes" column="nomyape" aggregator="sum" visible="true">
+    </Measure>
+  </Cube>
+</Schema>

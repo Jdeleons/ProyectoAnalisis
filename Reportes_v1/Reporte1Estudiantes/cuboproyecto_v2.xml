@@ -1,0 +1,40 @@
+<Schema name="proyecto_dwh">
+  <Cube name="CuboEstudiantes" visible="true" cache="true" enabled="true">
+    <Table name="tablahechos" alias="">
+    </Table>
+    <Dimension type="StandardDimension" visible="true" foreignKey="departamento_id" name="DimDepartamento">
+      <Hierarchy name="New Hierarchy 0" visible="true" hasAll="true" allMemberName="Estudiantes_por_Departamento" primaryKey="departamento_id">
+        <Table name="dimdepartamento" alias="">
+        </Table>
+        <Level name="NivelDepartamento" visible="true" column="departamento" uniqueMembers="false">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension type="StandardDimension" visible="true" foreignKey="grado_id" name="DimGrado">
+      <Hierarchy name="New Hierarchy 0" visible="true" hasAll="true" allMemberName="Total_Estudiantes_por_Grado" primaryKey="grado_id">
+        <Table name="dimgrado" alias="">
+        </Table>
+        <Level name="NivelGrado" visible="true" column="grado" uniqueMembers="false">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension type="StandardDimension" visible="true" foreignKey="sexo_id" name="DimSexo">
+      <Hierarchy name="New Hierarchy 0" visible="true" hasAll="true" allMemberName="Todos_Estudiantes_por_Sexo" primaryKey="sexo_id">
+        <Table name="dimsexo" alias="">
+        </Table>
+        <Level name="NivelSexo" visible="true" column="sexo" uniqueMembers="false">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension type="StandardDimension" visible="true" foreignKey="docente_id" name="DimDocente">
+      <Hierarchy name="New Hierarchy 0" visible="true" hasAll="true" allMemberName="Total_estudiantes_por_Docente" primaryKey="docente_id">
+        <Table name="dimdocente" alias="">
+        </Table>
+        <Level name="NivelDocente" visible="true" column="nombres" uniqueMembers="false">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Measure name="TotalEstudiantes" column="dpi_id" aggregator="sum" visible="true">
+    </Measure>
+  </Cube>
+</Schema>

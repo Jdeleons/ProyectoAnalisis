@@ -1,0 +1,10 @@
+cada carpeta pertenece un reporte de los que se nos pide en el proyecto 
+1- la carpeta BD Principal contiene  la BD principal  la cual a la hora de crar hay que tener una BD con el nombre de: bd_proyectobda
+2- en las siguientes 3 carpetas estan los reportes cada  carpeta contiene la transfomracion ETL  el Cubo xml
+	la BD DHW ya con datos 
+3- para la cracion de las base de datos  de los cubos es asi
+>> el primer cubo usa la BD y hay que crearla con el nombre de: proyectobda_dwh
+>> el Segundo cubo usa la BD y hay que crearla con el nombre de: cubo2_proyectodwh
+>> el Tercer cubo usa la BD y hay que crearla con el nombre de: cubo3_proyectodwh
+
+4- para cada publicacion por cubo al Bi server   hay que crear una conexion  a su base de datos DWH ya transformada

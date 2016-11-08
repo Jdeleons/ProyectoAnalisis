@@ -1,0 +1,40 @@
+<Schema name="Cubo3proyectoDWH">
+  <Cube name="cubo3Matriculado" visible="true" cache="true" enabled="true">
+    <Table name="tablahechos3" alias="">
+    </Table>
+    <Dimension type="StandardDimension" visible="true" foreignKey="anyo_id" name="DimAnyo">
+      <Hierarchy name="New Hierarchy 0" visible="true" hasAll="true" allMemberName="Por Anio" primaryKey="anyo_id">
+        <Table name="dimanyo" alias="">
+        </Table>
+        <Level name="NivelAnio" visible="true" column="year(m.fecha_matriculacion)" uniqueMembers="false">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension type="StandardDimension" visible="true" foreignKey="departamento_id" name="DimDepartamento">
+      <Hierarchy name="New Hierarchy 0" visible="true" hasAll="true" allMemberName="Por Departamento" primaryKey="departamento_id">
+        <Table name="dimdepartamento" alias="">
+        </Table>
+        <Level name="NivelDepartamento" visible="true" column="departamento" uniqueMembers="false">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension type="StandardDimension" visible="true" foreignKey="grado_id" name="DimensionGrado">
+      <Hierarchy name="New Hierarchy 0" visible="true" hasAll="true" allMemberName="Por Grado" primaryKey="grado_id">
+        <Table name="dimgrado" alias="">
+        </Table>
+        <Level name="NivelGrado" visible="true" column="grado" uniqueMembers="false">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension type="StandardDimension" visible="true" foreignKey="seccion_id" name="DimensionSeccion">
+      <Hierarchy name="New Hierarchy 0" visible="true" hasAll="true" allMemberName="Por Seccion" primaryKey="seccion_id">
+        <Table name="dimseccion" alias="">
+        </Table>
+        <Level name="NivelSeccion" visible="true" column="seccion" uniqueMembers="false">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Measure name="Total Estudiante" column="nomyape" aggregator="sum" visible="true">
+    </Measure>
+  </Cube>
+</Schema>
