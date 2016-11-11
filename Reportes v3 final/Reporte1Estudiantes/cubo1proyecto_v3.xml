@@ -1,0 +1,40 @@
+<Schema name="proyecto_dwh">
+  <Cube name="CuboEstudiantes" visible="true" cache="true" enabled="true">
+    <Table name="tablahechos1">
+    </Table>
+    <Dimension type="StandardDimension" visible="true" foreignKey="departamento_id" highCardinality="false" name="DimDepartamento">
+      <Hierarchy name="Total Estudiantes " visible="true" hasAll="true" allMemberName="Por Departamento" primaryKey="departamento_id">
+        <Table name="dimdepartamento">
+        </Table>
+        <Level name="NivelDepartamento" visible="true" column="departamento" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension type="StandardDimension" visible="true" foreignKey="grado_id" highCardinality="false" name="DimGrado">
+      <Hierarchy name="Total Estudiantes" visible="true" hasAll="true" allMemberName="Por Grado" primaryKey="grado_id">
+        <Table name="dimgrado">
+        </Table>
+        <Level name="NivelGrado" visible="true" column="grado" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension type="StandardDimension" visible="true" foreignKey="docente_id" highCardinality="false" name="DimDocente">
+      <Hierarchy name="Total Estudiantes" visible="true" hasAll="true" allMemberName="Por Docente" primaryKey="docente_id">
+        <Table name="dimdocente">
+        </Table>
+        <Level name="NivelDocente" visible="true" column="nombres" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension type="StandardDimension" visible="true" foreignKey="sexo_id" name="DimeSexo">
+      <Hierarchy name="Total Estudiantes" visible="true" hasAll="true" allMemberName="Por Sexo" primaryKey="sexo_id">
+        <Table name="dimsexo" alias="">
+        </Table>
+        <Level name="NivelSexo" visible="true" column="sexo" uniqueMembers="false">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Measure name="TotalEstudiantes" column="dpi_id" aggregator="sum" visible="true">
+    </Measure>
+  </Cube>
+</Schema>
