@@ -1,0 +1,11 @@
+dimeduc.esy.es
+
+
+correo jonatannav@gmail.com
+
+dominio 	dimeduc.esy.es
+pass		dinamitgroup
+
+host		dimeduc.esy.es
+usuario		u993847810
+pass		dinamitgroup
