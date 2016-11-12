@@ -368,7 +368,7 @@
            <schema_name/>
            </partitioning>
     <connection>bdprincipalDWH</connection>
-    <sql>SELECT tbl_estudiante.dpi_id, tbl_estudiante.nomyape,tbl_estudiante.sexo,tbl_dep.departamento,tbl_matricula.cod_matricula_id,tbl_grado.grado,tbl_docente.nombres , tbl_estudiante.becado&#xd;&#xa;FROM mydb.tbl_estudiante inner join tbl_dep on tbl_estudiante.fk_dep&#x3d;tbl_dep.id_dep&#xd;&#xa;inner join tbl_matricula on  tbl_matricula.fk_dpi&#x3d;tbl_estudiante.dpi_id inner join tbl_grado on tbl_matricula.fk_grado&#x3d;tbl_grado.id_grado&#xd;&#xa;inner join tbl_docente on tbl_grado.fk_dpidocente&#x3d; tbl_docente.dpidocente_id&#x3b;</sql>
+    <sql>SELECT tbl_estudiante.dpi_id, tbl_estudiante.nomyape,tbl_estudiante.sexo,tbl_dep.departamento,tbl_matricula.cod_matricula_id,tbl_grado.grado,tbl_docente.nombres , tbl_estudiante.becado&#xd;&#xa;FROM tbl_estudiante inner join tbl_dep on tbl_estudiante.fk_dep&#x3d;tbl_dep.id_dep&#xd;&#xa;inner join tbl_matricula on  tbl_matricula.fk_dpi&#x3d;tbl_estudiante.dpi_id inner join tbl_grado on tbl_matricula.fk_grado&#x3d;tbl_grado.id_grado&#xd;&#xa;inner join tbl_docente on tbl_grado.fk_dpidocente&#x3d; tbl_docente.dpidocente_id&#x3b;</sql>
     <limit>0</limit>
     <lookup/>
     <execute_each_row>N</execute_each_row>

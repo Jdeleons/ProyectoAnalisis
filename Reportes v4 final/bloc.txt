@@ -1,0 +1,9 @@
+1- paso  uno cambiar la conexion de la bd principa principal por los datos:
+host: db4free.net
+Base de datos: bd_proyectobda
+Nombre de usuario: dinamitgroup
+pass: proyectosumg
+2- testear que haya conexion 
+3- en la tabla entrada de datos  la consulta no te deja xq hay un inner join que  lleva mydb   (mydb.tbl_estudiante)
+entonces solo tenes que  quitar ese mydb para que te quede asi (tbl_estudiante)
+y previsualizas los datos
