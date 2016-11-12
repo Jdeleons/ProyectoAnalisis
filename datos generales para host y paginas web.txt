@@ -1,0 +1,29 @@
+datos generales para host y paginas web
+base de datos con conexiones externas
+host: db4free.net
+Base de datos: bd_proyectobda
+Nombre de usuario: dinamitgroup
+pass: proyectosumg	
+
+host de la pagina web
+hostinger.es
+cuenta :amestuardo@gmail.com
+pass: proyectosumg
+
+pagina web : http://proyectosumg.esy.es/
+para filezile o ftp
+servidor : proyectosumg.esy.es
+USUARIO:  u167858482
+CONTRASEÑA: proyectosumg
+
+
+pagina web 
+ http://proyectosumg.esy.es/
+ login 
+ cuenta: admin
+ pass: admin
+
+
+
+
+
